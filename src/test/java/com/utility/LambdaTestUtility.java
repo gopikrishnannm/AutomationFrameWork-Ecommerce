@@ -30,10 +30,11 @@ public class LambdaTestUtility {
 	    ltOptions.put("w3c", true);
 
 	    capabilities.setCapability("LT:Options", ltOptions);
+	    capabilitiesLocal.set(capabilities);
 
 	    WebDriver driver = null;
 	    try {
-	        driver = new RemoteWebDriver(new URL(HUB_URL), capabilities);
+	        driver = new RemoteWebDriver(new URL(HUB_URL), capabilitiesLocal.get());
 	    } catch (MalformedURLException e) {
 	        e.printStackTrace();
 	    }
@@ -48,6 +49,8 @@ public class LambdaTestUtility {
 			driverLocal.get().quit();
 		}
 	}
+	
+	
 
 	
 

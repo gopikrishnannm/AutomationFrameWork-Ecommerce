@@ -28,7 +28,7 @@ public abstract class BrowserUtility {
 
 	public BrowserUtility(WebDriver driver) {
 		super();
-		this.driver.get();
+		this.driver.set(driver);
 	}
 	
 	public BrowserUtility(String browserName) {
