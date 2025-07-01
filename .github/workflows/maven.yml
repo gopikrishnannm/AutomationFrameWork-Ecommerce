@@ -42,6 +42,8 @@ jobs:
 
     - name: Ensure screenshots directory exists
       run: mkdir -p screenshots
+    - name: Ensure screenshots directory exists
+      run: mkdir -p screenshots
 
     - name: Upload Screenshots as Artifacts
       if: always()
