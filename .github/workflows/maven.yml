@@ -64,7 +64,7 @@ jobs:
         cp -R report.html public/extent-reports/
         cp -R screenshots/ public/extent-reports/screenshots/
         ls -l
-     
+    
 
     - name: Deploy
       if: always()
