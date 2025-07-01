@@ -66,7 +66,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
        floder: public/extent-reports/
-       token: ${{secreats.PAGE}}
+       token: ${{secrets.PAGE}}
        clean: true
     - name: Test Execution Status
       run : echo "Test Execution Completed"
