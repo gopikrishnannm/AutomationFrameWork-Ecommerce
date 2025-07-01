@@ -150,7 +150,8 @@ public abstract class BrowserUtility {
 			date = new Date();
 			format= new SimpleDateFormat("HH-mm-ss");
 			timeStamp = format.format(date);
-			path = System.getProperty("user.dir")+"//screeshots//"+testName+" - "+timeStamp+"png";
+			//path = System.getProperty("user.dir")+"//screeshots//"+testName+" - "+timeStamp+"png";
+			path = "./screeshots/"+testName+" - "+timeStamp+"png";
 			screeshotFile = new File(path);
 			FileUtils.copyFile(screenshotData, screeshotFile);
 		} catch (IOException e) {
