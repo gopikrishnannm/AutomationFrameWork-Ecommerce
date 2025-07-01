@@ -65,7 +65,7 @@ jobs:
       if: always()
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-       floder: public/extent-reports/
+       folder: public/extent-reports/
        token: ${{secrets.PAGE}}
        clean: true
     - name: Test Execution Status
