@@ -9,7 +9,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.ui.pages.HomePage;
-import com.ui.pages.TestBase;
 import com.ui.pojo.User;
 import com.utility.LoggerUtility;
 

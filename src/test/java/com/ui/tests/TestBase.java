@@ -1,4 +1,4 @@
-package com.ui.pages;
+package com.ui.tests;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +9,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.constants.Browser;
+import com.ui.pages.HomePage;
 import com.utility.BrowserUtility;
 import com.utility.LambdaTestUtility;
 import com.utility.LoggerUtility;
