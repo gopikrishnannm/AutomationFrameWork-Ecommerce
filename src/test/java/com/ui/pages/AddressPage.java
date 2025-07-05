@@ -19,6 +19,7 @@ public class AddressPage extends BrowserUtility{
 	private static final By ADDRESS_ALIAS_TEXTBOX_LOCATOR = By.id("alias");
 	private static final By STATE_DROPDOWN_LOCATOR = By.id("id_state");
 	private static final By SAVE_ADDRESS_LOCATOR = By.id("submitAddress");
+	private static final By ADDRESS_HEADING = By.tagName("h3");
 	
 	
 	
@@ -27,7 +28,7 @@ public class AddressPage extends BrowserUtility{
 	}
 	
 	
-	public void saveAddress(AddressPOJO a) {
+	public String saveAddress(AddressPOJO a) {
 		enterText(COMPANY_TEXTBOX_LOCATOR, a.getCompany());
 	    enterText(ADDRESS1_TEXTBOX_LOCATOR, a.getAddressLine1());
 	    enterText(ADDRESS2_TEXTBOX_LOCATOR, a.getAddressLine2());
@@ -39,6 +40,9 @@ public class AddressPage extends BrowserUtility{
 	    clearText(ADDRESS_ALIAS_TEXTBOX_LOCATOR);
 	    enterText(ADDRESS_ALIAS_TEXTBOX_LOCATOR, a.getAddressAlias());
 	    selectFromDropDown(STATE_DROPDOWN_LOCATOR, a.getState());
+	    clickOn(SAVE_ADDRESS_LOCATOR);
+	    String newAddress = getVisibleText(ADDRESS_HEADING);
+	    return newAddress;
 	}
 	
 	
